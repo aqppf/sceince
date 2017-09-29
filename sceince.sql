@@ -15,142 +15,10 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `epaytrip_catering`
---
-
-DROP TABLE IF EXISTS `epaytrip_catering`;
+DROP TABLE IF EXISTS `sc_app_help`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `epaytrip_catering` (
-  `seq` bigint(20) NOT NULL AUTO_INCREMENT,
-  `id` varchar(20) COLLATE utf8_bin DEFAULT '',
-  `name` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `logo_image` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `logo_image_loc` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `name_kana` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `address` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `station_name` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `ktai_coupon` varchar(2) COLLATE utf8_bin DEFAULT '',
-  `large_service_area_code` varchar(20) COLLATE utf8_bin DEFAULT '',
-  `large_service_area_name` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `service_area_code` varchar(20) COLLATE utf8_bin DEFAULT '',
-  `service_area_name` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `large_area_code` varchar(20) COLLATE utf8_bin DEFAULT '',
-  `large_area_name` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `middle_area_code` varchar(20) COLLATE utf8_bin DEFAULT '',
-  `middle_area_name` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `small_area_code` varchar(20) COLLATE utf8_bin DEFAULT '',
-  `small_area_name` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `lat` varchar(20) COLLATE utf8_bin DEFAULT '',
-  `lng` varchar(20) COLLATE utf8_bin DEFAULT '',
-  `genre_code` varchar(20) COLLATE utf8_bin DEFAULT '',
-  `genre_name` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `genre_catch` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `sub_genre_code` varchar(20) COLLATE utf8_bin DEFAULT '',
-  `sub_genre_name` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `food_code` varchar(20) COLLATE utf8_bin DEFAULT '',
-  `food_name` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `sub_food_code` varchar(20) COLLATE utf8_bin DEFAULT '',
-  `sub_food_name` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `budget_code` varchar(20) COLLATE utf8_bin DEFAULT '',
-  `budget_name` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `budget_average` text COLLATE utf8_bin,
-  `budget_memo` text COLLATE utf8_bin,
-  `catch` text COLLATE utf8_bin,
-  `capacity` varchar(10) COLLATE utf8_bin DEFAULT '',
-  `access` text COLLATE utf8_bin,
-  `mobile_access` text COLLATE utf8_bin,
-  `urls_pc` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `urls_mobile` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `urls_qr` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `photo_pc_l` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `photo_pc_m` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `photo_pc_s` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `photo_mobile_l` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `photo_mobile_s` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `photo_pc_l_loc` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `photo_pc_m_loc` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `photo_pc_s_loc` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `photo_mobile_l_loc` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `photo_mobile_s_loc` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `open` text COLLATE utf8_bin,
-  `close` text COLLATE utf8_bin,
-  `party_capacity` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `wifi` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `wedding` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `course` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `free_drink` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `free_food` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `private_room` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `horigotatsu` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `tatami` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `card` varchar(50) COLLATE utf8_bin DEFAULT '',
-  `non_smoking` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `charter` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `ktai` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `parking` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `barrier_free` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `other_memo` text COLLATE utf8_bin,
-  `sommelier` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `open_air` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `cartering_show` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `equipment` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `karaoke` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `band` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `tv` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `english` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `pet` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `child` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `lunch` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `midnight` varchar(100) COLLATE utf8_bin DEFAULT '',
-  `shop_detail_memo` text COLLATE utf8_bin,
-  `coupon_urls_pc` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `coupon_urls_mobile` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `coupon_urls_qr` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `coupon_urls_sp` varchar(255) COLLATE utf8_bin DEFAULT '',
-  `cr_date` varchar(17) COLLATE utf8_bin DEFAULT '',
-  `area_cd` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `zdc_lat` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `zdc_lng` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `zdc_ch_name` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `area_01` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `area_02` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `area_03` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  PRIMARY KEY (`seq`)
-) ENGINE=InnoDB AUTO_INCREMENT=103926 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `yy_address`
---
-
-DROP TABLE IF EXISTS `yy_address`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_address` (
-  `id` int(5) unsigned NOT NULL AUTO_INCREMENT,
-  `pid` int(5) unsigned NOT NULL DEFAULT '0',
-  `name` varchar(50) NOT NULL DEFAULT '',
-  `phone` varchar(6) NOT NULL DEFAULT '0',
-  `zone` varchar(8) NOT NULL DEFAULT '0',
-  `map` varchar(30) NOT NULL DEFAULT '',
-  `plate` varchar(10) NOT NULL DEFAULT '',
-  `level` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `weight` smallint(5) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
-  KEY `pid` (`pid`)
-) ENGINE=InnoDB AUTO_INCREMENT=2551 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='地址表';
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `yy_app_help`
---
-
-DROP TABLE IF EXISTS `yy_app_help`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_app_help` (
+CREATE TABLE `sc_app_help` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
   `type` enum('about','help') NOT NULL COMMENT '类型',
   `title` varchar(255) NOT NULL COMMENT '标题',
@@ -162,13 +30,13 @@ CREATE TABLE `yy_app_help` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_article`
+-- Table structure for table `sc_article`
 --
 
-DROP TABLE IF EXISTS `yy_article`;
+DROP TABLE IF EXISTS `sc_article`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_article` (
+CREATE TABLE `sc_article` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '文章ID',
   `model` enum('normal','video') NOT NULL DEFAULT 'normal' COMMENT '模型',
   `short_title` varchar(20) NOT NULL,
@@ -213,13 +81,13 @@ CREATE TABLE `yy_article` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_article_collect`
+-- Table structure for table `sc_article_collect`
 --
 
-DROP TABLE IF EXISTS `yy_article_collect`;
+DROP TABLE IF EXISTS `sc_article_collect`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_article_collect` (
+CREATE TABLE `sc_article_collect` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '系统id',
   `articleId` int(10) unsigned NOT NULL COMMENT '资讯id',
   `productId` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品ID',
@@ -232,13 +100,13 @@ CREATE TABLE `yy_article_collect` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_article_hate`
+-- Table structure for table `sc_article_hate`
 --
 
-DROP TABLE IF EXISTS `yy_article_hate`;
+DROP TABLE IF EXISTS `sc_article_hate`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_article_hate` (
+CREATE TABLE `sc_article_hate` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '系统id',
   `articleId` int(10) unsigned NOT NULL COMMENT '资讯id',
   `userId` int(10) unsigned NOT NULL COMMENT '用户id',
@@ -249,13 +117,13 @@ CREATE TABLE `yy_article_hate` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_article_like`
+-- Table structure for table `sc_article_like`
 --
 
-DROP TABLE IF EXISTS `yy_article_like`;
+DROP TABLE IF EXISTS `sc_article_like`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_article_like` (
+CREATE TABLE `sc_article_like` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '系统id',
   `articleId` int(10) unsigned NOT NULL COMMENT '资讯id',
   `userId` int(10) unsigned NOT NULL COMMENT '用户id',
@@ -266,13 +134,13 @@ CREATE TABLE `yy_article_like` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_article_review`
+-- Table structure for table `sc_article_review`
 --
 
-DROP TABLE IF EXISTS `yy_article_review`;
+DROP TABLE IF EXISTS `sc_article_review`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_article_review` (
+CREATE TABLE `sc_article_review` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '评价ID',
   `userId` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '评价人ID',
   `articleId` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '被评价的文章ID',
@@ -285,13 +153,13 @@ CREATE TABLE `yy_article_review` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_article_take`
+-- Table structure for table `sc_article_take`
 --
 
-DROP TABLE IF EXISTS `yy_article_take`;
+DROP TABLE IF EXISTS `sc_article_take`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_article_take` (
+CREATE TABLE `sc_article_take` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '系统id',
   `articleId` int(10) unsigned NOT NULL COMMENT '资讯id',
   `productId` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品ID',
@@ -302,13 +170,13 @@ CREATE TABLE `yy_article_take` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_category`
+-- Table structure for table `sc_category`
 --
 
-DROP TABLE IF EXISTS `yy_category`;
+DROP TABLE IF EXISTS `sc_category`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_category` (
+CREATE TABLE `sc_category` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL COMMENT '栏目名称',
   `code` varchar(64) NOT NULL COMMENT 'URL目录名称',
@@ -327,13 +195,13 @@ CREATE TABLE `yy_category` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_city`
+-- Table structure for table `sc_city`
 --
 
-DROP TABLE IF EXISTS `yy_city`;
+DROP TABLE IF EXISTS `sc_city`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_city` (
+CREATE TABLE `sc_city` (
   `id` int(5) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(10) NOT NULL DEFAULT '',
   `pinyin` varchar(20) CHARACTER SET ascii NOT NULL DEFAULT '',
@@ -345,13 +213,13 @@ CREATE TABLE `yy_city` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_coupon`
+-- Table structure for table `sc_coupon`
 --
 
-DROP TABLE IF EXISTS `yy_coupon`;
+DROP TABLE IF EXISTS `sc_coupon`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_coupon` (
+CREATE TABLE `sc_coupon` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
   `batchId` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '批次ID',
   `type` enum('cash','discount') NOT NULL COMMENT '优惠券类型',
@@ -367,13 +235,13 @@ CREATE TABLE `yy_coupon` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_coupon_batch`
+-- Table structure for table `sc_coupon_batch`
 --
 
-DROP TABLE IF EXISTS `yy_coupon_batch`;
+DROP TABLE IF EXISTS `sc_coupon_batch`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_coupon_batch` (
+CREATE TABLE `sc_coupon_batch` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(30) NOT NULL COMMENT '优惠券名称',
   `type` enum('cash','discount') NOT NULL COMMENT '优惠券类型',
@@ -391,13 +259,13 @@ CREATE TABLE `yy_coupon_batch` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_data_picture`
+-- Table structure for table `sc_data_picture`
 --
 
-DROP TABLE IF EXISTS `yy_data_picture`;
+DROP TABLE IF EXISTS `sc_data_picture`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_data_picture` (
+CREATE TABLE `sc_data_picture` (
   `pic_id` bigint(21) NOT NULL AUTO_INCREMENT COMMENT '自动',
   `code` varchar(21) NOT NULL COMMENT '符号（poiid）',
   `url` varchar(255) NOT NULL COMMENT '图片url',
@@ -411,13 +279,13 @@ CREATE TABLE `yy_data_picture` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_device`
+-- Table structure for table `sc_device`
 --
 
-DROP TABLE IF EXISTS `yy_device`;
+DROP TABLE IF EXISTS `sc_device`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_device` (
+CREATE TABLE `sc_device` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `identify` varchar(50) NOT NULL,
   `gender` enum('male','female') NOT NULL DEFAULT 'female',
@@ -427,13 +295,13 @@ CREATE TABLE `yy_device` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_feedback`
+-- Table structure for table `sc_feedback`
 --
 
-DROP TABLE IF EXISTS `yy_feedback`;
+DROP TABLE IF EXISTS `sc_feedback`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_feedback` (
+CREATE TABLE `sc_feedback` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
   `text` text COMMENT '内容',
   `mobile` varchar(20) DEFAULT NULL COMMENT '手机号',
@@ -454,13 +322,13 @@ CREATE TABLE `yy_feedback` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_file`
+-- Table structure for table `sc_file`
 --
 
-DROP TABLE IF EXISTS `yy_file`;
+DROP TABLE IF EXISTS `sc_file`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_file` (
+CREATE TABLE `sc_file` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '上传文件ID',
   `groupId` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '上传文件组ID',
   `userId` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '上传人ID',
@@ -474,13 +342,13 @@ CREATE TABLE `yy_file` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_file_group`
+-- Table structure for table `sc_file_group`
 --
 
-DROP TABLE IF EXISTS `yy_file_group`;
+DROP TABLE IF EXISTS `sc_file_group`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_file_group` (
+CREATE TABLE `sc_file_group` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '上传文件组ID',
   `name` varchar(255) NOT NULL COMMENT '上传文件组名称',
   `code` varchar(255) NOT NULL COMMENT '上传文件组编码',
@@ -490,13 +358,13 @@ CREATE TABLE `yy_file_group` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_keyword`
+-- Table structure for table `sc_keyword`
 --
 
-DROP TABLE IF EXISTS `yy_keyword`;
+DROP TABLE IF EXISTS `sc_keyword`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_keyword` (
+CREATE TABLE `sc_keyword` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '标签ID',
   `name` varchar(64) NOT NULL COMMENT '标签名称',
   `weight` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '排序',
@@ -507,13 +375,13 @@ CREATE TABLE `yy_keyword` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_mobile_code`
+-- Table structure for table `sc_mobile_code`
 --
 
-DROP TABLE IF EXISTS `yy_mobile_code`;
+DROP TABLE IF EXISTS `sc_mobile_code`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_mobile_code` (
+CREATE TABLE `sc_mobile_code` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `type` varchar(20) NOT NULL,
   `mobile` varchar(20) NOT NULL,
@@ -525,13 +393,13 @@ CREATE TABLE `yy_mobile_code` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_order`
+-- Table structure for table `sc_order`
 --
 
-DROP TABLE IF EXISTS `yy_order`;
+DROP TABLE IF EXISTS `sc_order`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_order` (
+CREATE TABLE `sc_order` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '订单ID',
   `sn` varchar(32) NOT NULL COMMENT '订单编号',
   `status` enum('created','paid','send','success','close') NOT NULL COMMENT '订单状态',
@@ -561,13 +429,13 @@ CREATE TABLE `yy_order` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_order_log`
+-- Table structure for table `sc_order_log`
 --
 
-DROP TABLE IF EXISTS `yy_order_log`;
+DROP TABLE IF EXISTS `sc_order_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_order_log` (
+CREATE TABLE `sc_order_log` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '订单日志ID',
   `orderId` int(10) unsigned NOT NULL COMMENT '订单ID',
   `type` varchar(32) NOT NULL COMMENT '订单日志类型',
@@ -582,13 +450,13 @@ CREATE TABLE `yy_order_log` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_order_product`
+-- Table structure for table `sc_order_product`
 --
 
-DROP TABLE IF EXISTS `yy_order_product`;
+DROP TABLE IF EXISTS `sc_order_product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_order_product` (
+CREATE TABLE `sc_order_product` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
   `orderId` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '订单号',
   `orderSn` varchar(32) NOT NULL COMMENT '订单流水号',
@@ -614,13 +482,13 @@ CREATE TABLE `yy_order_product` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_poidata`
+-- Table structure for table `sc_poidata`
 --
 
-DROP TABLE IF EXISTS `yy_poidata`;
+DROP TABLE IF EXISTS `sc_poidata`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_poidata` (
+CREATE TABLE `sc_poidata` (
   `poiid` bigint(21) NOT NULL AUTO_INCREMENT COMMENT '符号',
   `country` varchar(5) NOT NULL COMMENT '国家',
   `grunaviflg` tinyint(1) DEFAULT NULL,
@@ -688,13 +556,13 @@ CREATE TABLE `yy_poidata` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_product`
+-- Table structure for table `sc_product`
 --
 
-DROP TABLE IF EXISTS `yy_product`;
+DROP TABLE IF EXISTS `sc_product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_product` (
+CREATE TABLE `sc_product` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '课程ID',
   `title` varchar(255) NOT NULL COMMENT '商品标题',
   `status` enum('draft','published') NOT NULL DEFAULT 'draft' COMMENT '商品状态',
@@ -724,13 +592,13 @@ CREATE TABLE `yy_product` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_product_category`
+-- Table structure for table `sc_product_category`
 --
 
-DROP TABLE IF EXISTS `yy_product_category`;
+DROP TABLE IF EXISTS `sc_product_category`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_product_category` (
+CREATE TABLE `sc_product_category` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '分类ID',
   `code` varchar(64) NOT NULL DEFAULT '' COMMENT '分类编码',
   `name` varchar(255) NOT NULL COMMENT '分类名称',
@@ -746,13 +614,13 @@ CREATE TABLE `yy_product_category` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_product_review`
+-- Table structure for table `sc_product_review`
 --
 
-DROP TABLE IF EXISTS `yy_product_review`;
+DROP TABLE IF EXISTS `sc_product_review`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_product_review` (
+CREATE TABLE `sc_product_review` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '评价ID',
   `userId` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '评价人ID',
   `productId` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '被评价的文章ID',
@@ -765,13 +633,13 @@ CREATE TABLE `yy_product_review` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_product_rule`
+-- Table structure for table `sc_product_rule`
 --
 
-DROP TABLE IF EXISTS `yy_product_rule`;
+DROP TABLE IF EXISTS `sc_product_rule`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_product_rule` (
+CREATE TABLE `sc_product_rule` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '商品规格id',
   `key` varchar(30) NOT NULL COMMENT '规格id组合',
   `money` decimal(10,2) unsigned NOT NULL COMMENT '规格商城价',
@@ -784,13 +652,13 @@ CREATE TABLE `yy_product_rule` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_product_wait`
+-- Table structure for table `sc_product_wait`
 --
 
-DROP TABLE IF EXISTS `yy_product_wait`;
+DROP TABLE IF EXISTS `sc_product_wait`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_product_wait` (
+CREATE TABLE `sc_product_wait` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '系统id',
   `articleId` int(10) unsigned NOT NULL COMMENT '资讯id',
   `productId` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品ID',
@@ -801,13 +669,13 @@ CREATE TABLE `yy_product_wait` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_review_like`
+-- Table structure for table `sc_review_like`
 --
 
-DROP TABLE IF EXISTS `yy_review_like`;
+DROP TABLE IF EXISTS `sc_review_like`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_review_like` (
+CREATE TABLE `sc_review_like` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '系统id',
   `reviewId` int(10) unsigned NOT NULL COMMENT '评论id',
   `userId` int(10) unsigned NOT NULL COMMENT '用户id',
@@ -818,13 +686,13 @@ CREATE TABLE `yy_review_like` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_rule`
+-- Table structure for table `sc_rule`
 --
 
-DROP TABLE IF EXISTS `yy_rule`;
+DROP TABLE IF EXISTS `sc_rule`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_rule` (
+CREATE TABLE `sc_rule` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '规格id',
   `name` varchar(20) NOT NULL COMMENT '规格名称',
   `memo` varchar(20) NOT NULL COMMENT '规格备注',
@@ -833,13 +701,13 @@ CREATE TABLE `yy_rule` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_rule_item`
+-- Table structure for table `sc_rule_item`
 --
 
-DROP TABLE IF EXISTS `yy_rule_item`;
+DROP TABLE IF EXISTS `sc_rule_item`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_rule_item` (
+CREATE TABLE `sc_rule_item` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '规格项id',
   `name` varchar(50) NOT NULL COMMENT '规格项名称',
   `logo` varchar(100) NOT NULL COMMENT '规格项图',
@@ -850,13 +718,13 @@ CREATE TABLE `yy_rule_item` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_setting`
+-- Table structure for table `sc_setting`
 --
 
-DROP TABLE IF EXISTS `yy_setting`;
+DROP TABLE IF EXISTS `sc_setting`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_setting` (
+CREATE TABLE `sc_setting` (
   `id` int(10) unsigned NOT NULL COMMENT '系统设置ID',
   `name` varchar(64) NOT NULL DEFAULT '' COMMENT '系统设置名',
   `value` text COMMENT '系统设置值'
@@ -864,13 +732,13 @@ CREATE TABLE `yy_setting` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_tag`
+-- Table structure for table `sc_tag`
 --
 
-DROP TABLE IF EXISTS `yy_tag`;
+DROP TABLE IF EXISTS `sc_tag`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_tag` (
+CREATE TABLE `sc_tag` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '标签ID',
   `name` varchar(64) NOT NULL COMMENT '标签名称',
   `createdTime` int(10) unsigned NOT NULL COMMENT '标签创建时间',
@@ -880,13 +748,13 @@ CREATE TABLE `yy_tag` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_user`
+-- Table structure for table `sc_user`
 --
 
-DROP TABLE IF EXISTS `yy_user`;
+DROP TABLE IF EXISTS `sc_user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_user` (
+CREATE TABLE `sc_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
   `email` varchar(128) NOT NULL COMMENT '用户邮箱',
   `mobile` varchar(32) NOT NULL DEFAULT '' COMMENT '手机号',
@@ -930,13 +798,13 @@ CREATE TABLE `yy_user` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_user_address`
+-- Table structure for table `sc_user_address`
 --
 
-DROP TABLE IF EXISTS `yy_user_address`;
+DROP TABLE IF EXISTS `sc_user_address`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_user_address` (
+CREATE TABLE `sc_user_address` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `userId` int(10) unsigned NOT NULL DEFAULT '0',
   `name` varchar(30) NOT NULL,
@@ -952,13 +820,13 @@ CREATE TABLE `yy_user_address` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_user_profile`
+-- Table structure for table `sc_user_profile`
 --
 
-DROP TABLE IF EXISTS `yy_user_profile`;
+DROP TABLE IF EXISTS `sc_user_profile`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_user_profile` (
+CREATE TABLE `sc_user_profile` (
   `id` int(10) unsigned NOT NULL COMMENT '用户ID',
   `truename` varchar(255) NOT NULL DEFAULT '' COMMENT '真实姓名',
   `idcard` varchar(24) NOT NULL DEFAULT '' COMMENT '身份证号码',
@@ -982,13 +850,13 @@ CREATE TABLE `yy_user_profile` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `yy_user_token`
+-- Table structure for table `sc_user_token`
 --
 
-DROP TABLE IF EXISTS `yy_user_token`;
+DROP TABLE IF EXISTS `sc_user_token`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `yy_user_token` (
+CREATE TABLE `sc_user_token` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'TOKEN编号',
   `token` varchar(64) NOT NULL COMMENT 'TOKEN值',
   `userId` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'TOKEN关联的用户ID',
