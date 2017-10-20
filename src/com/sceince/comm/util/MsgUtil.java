@@ -20,6 +20,10 @@ public class MsgUtil {
 		return byteArrayToHexStr(data);
 	}
 	
+	/**
+	 * Ëæ»úÊı
+	 * @return
+	 */
 	public static String Random() {
 		
 		double rand =  Math.random() * 1000;

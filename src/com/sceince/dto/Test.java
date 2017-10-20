@@ -4,6 +4,7 @@ public class Test {
 	private Integer id;
 	private String name;
 	private Integer age;
+	private Integer hynix;
 	public Integer getId() {
 		return id;
 	}
@@ -25,6 +26,12 @@ public class Test {
 	
 	public String toString() {
 		return id +"::"+ name +"::" + age;
+	}
+	public Integer getHynix() {
+		return hynix;
+	}
+	public void setHynix(Integer hynix) {
+		this.hynix = hynix;
 	}
 	
 }

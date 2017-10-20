@@ -44,7 +44,7 @@
 	    <property name="suffix" value=".jsp"/>
 	</bean>
 	
-	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">  
+	<bean id="dsfdsf" class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">  
         <property name="messageConverters">  
             <list>
                 <bean class="org.springframework.http.converter.StringHttpMessageConverter">
