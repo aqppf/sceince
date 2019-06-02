@@ -1,5 +1,6 @@
 package com.sceince.service;
 
 public interface UserService {
-	public Integer updateUser();
+	Integer updateUser();
+	void testAsync(String str); 
 }
